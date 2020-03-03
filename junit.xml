@@ -1,6 +1,6 @@
-<testsuites name="jest tests" tests="6" failures="6" time="2.427">
-  <testsuite name="undefined" errors="0" failures="6" skipped="0" timestamp="2020-03-03T22:04:12" time="2.427" tests="6">
-    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.083">
+<testsuites name="jest tests" tests="6" failures="6" time="2.057">
+  <testsuite name="undefined" errors="0" failures="6" skipped="0" timestamp="2020-03-03T22:07:06" time="2.057" tests="6">
+    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.082">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0&quot;]
 
 &lt;body&gt;
@@ -249,7 +249,7 @@
     at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
     at &lt;anonymous&gt;</failure>
     </testcase>
-    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.045">
+    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.031">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0&quot;]
 
 &lt;div&gt;
@@ -496,7 +496,7 @@
     at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
     at &lt;anonymous&gt;</failure>
     </testcase>
-    <testcase classname=" Adding Tasks" name=" Adding Tasks" time="0.163">
+    <testcase classname=" Adding Tasks" name=" Adding Tasks" time="0.192">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
 
 &lt;body&gt;
@@ -773,7 +773,7 @@
     at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
     at &lt;anonymous&gt;</failure>
     </testcase>
-    <testcase classname=" Selecting and Deselecting Tasks" name=" Selecting and Deselecting Tasks" time="0.118">
+    <testcase classname=" Selecting and Deselecting Tasks" name=" Selecting and Deselecting Tasks" time="0.134">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
 
 &lt;body&gt;
@@ -1050,7 +1050,7 @@
     at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
     at &lt;anonymous&gt;</failure>
     </testcase>
-    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.111">
+    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.126">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
 
 &lt;body&gt;
@@ -1327,7 +1327,7 @@
     at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
     at &lt;anonymous&gt;</failure>
     </testcase>
-    <testcase classname=" Moving Tasks" name=" Moving Tasks" time="0.113">
+    <testcase classname=" Moving Tasks" name=" Moving Tasks" time="0.118">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
 
 &lt;body&gt;
