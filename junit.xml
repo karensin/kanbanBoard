@@ -1,11 +1,15 @@
-<testsuites name="jest tests" tests="6" failures="4" time="1.983">
-  <testsuite name="undefined" errors="0" failures="4" skipped="0" timestamp="2020-03-03T22:10:45" time="1.983" tests="6">
-    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.066">
+<testsuites name="jest tests" tests="6" failures="3" time="2.679">
+  <testsuite name="undefined" errors="0" failures="3" skipped="0" timestamp="2020-03-03T22:12:22" time="2.679" tests="6">
+    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.077">
     </testcase>
-    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.026">
+    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.041">
     </testcase>
-    <testcase classname=" Adding Tasks" name=" Adding Tasks" time="0.146">
-      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
+    <testcase classname=" Adding Tasks" name=" Adding Tasks" time="0.238">
+    </testcase>
+    <testcase classname=" Selecting and Deselecting Tasks" name=" Selecting and Deselecting Tasks" time="0.226">
+      <failure>Error: Found multiple elements by: [data-testid=&quot;task-test-task-1&quot;]
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
 
 &lt;body&gt;
   &lt;div&gt;
@@ -52,6 +56,42 @@
               &lt;/div&gt;
             &lt;/div&gt;
             &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-1&quot;
+              &gt;
+                test task 1
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-2&quot;
+              &gt;
+                test task 2
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-1&quot;
+              &gt;
+                test task 1
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-2&quot;
+              &gt;
+                test task 2
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
               class=&quot;bp3-collapse&quot;
               style=&quot;height: 0px;&quot;
             &gt;
@@ -73,7 +113,7 @@
                   &gt;
                     &lt;button
                       class=&quot;bp3-button&quot;
-                      id=&quot;stage-0-new-task-input-confirm&quot;
+                      data-testid=&quot;stage-0-new-task-input-confirm&quot;
                       type=&quot;button&quot;
                     &gt;
                       &lt;span
@@ -270,10 +310,9 @@
   &lt;/div&gt;
 &lt;/body&gt;
     at getElementError (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
-    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
-    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
-    at renderAppAndAddTasks (/projects/challenge/src/App.test.js:29:29)
-    at Object.&lt;anonymous&gt;.test (/projects/challenge/src/App.test.js:87:3)
+    at getMultipleElementsFoundError (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:50:10)
+    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:86:13)
+    at Object.&lt;anonymous&gt;.test (/projects/challenge/src/App.test.js:99:15)
     at Object.asyncFn (/projects/challenge/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
     at resolve (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
     at new Promise (&lt;anonymous&gt;)
@@ -281,8 +320,10 @@
     at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
     at &lt;anonymous&gt;</failure>
     </testcase>
-    <testcase classname=" Selecting and Deselecting Tasks" name=" Selecting and Deselecting Tasks" time="0.107">
-      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
+    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.227">
+      <failure>Error: Found multiple elements by: [data-testid=&quot;task-test-task-1&quot;]
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
 
 &lt;body&gt;
   &lt;div&gt;
@@ -329,6 +370,60 @@
               &lt;/div&gt;
             &lt;/div&gt;
             &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-1&quot;
+              &gt;
+                test task 1
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-2&quot;
+              &gt;
+                test task 2
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-1&quot;
+              &gt;
+                test task 1
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-2&quot;
+              &gt;
+                test task 2
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-1&quot;
+              &gt;
+                test task 1
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-2&quot;
+              &gt;
+                test task 2
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
               class=&quot;bp3-collapse&quot;
               style=&quot;height: 0px;&quot;
             &gt;
@@ -350,7 +445,7 @@
                   &gt;
                     &lt;button
                       class=&quot;bp3-button&quot;
-                      id=&quot;stage-0-new-task-input-confirm&quot;
+                      data-testid=&quot;stage-0-new-task-input-confirm&quot;
                       type=&quot;button&quot;
                     &gt;
                       &lt;span
@@ -547,10 +642,9 @@
   &lt;/div&gt;
 &lt;/body&gt;
     at getElementError (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
-    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
-    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
-    at renderAppAndAddTasks (/projects/challenge/src/App.test.js:29:29)
-    at Object.&lt;anonymous&gt;.test (/projects/challenge/src/App.test.js:97:3)
+    at getMultipleElementsFoundError (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:50:10)
+    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:86:13)
+    at Object.&lt;anonymous&gt;.test (/projects/challenge/src/App.test.js:113:17)
     at Object.asyncFn (/projects/challenge/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
     at resolve (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
     at new Promise (&lt;anonymous&gt;)
@@ -558,8 +652,10 @@
     at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
     at &lt;anonymous&gt;</failure>
     </testcase>
-    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.102">
-      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
+    <testcase classname=" Moving Tasks" name=" Moving Tasks" time="0.219">
+      <failure>Error: Found multiple elements by: [data-testid=&quot;task-test-task-1&quot;]
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
 
 &lt;body&gt;
   &lt;div&gt;
@@ -606,6 +702,78 @@
               &lt;/div&gt;
             &lt;/div&gt;
             &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-1&quot;
+              &gt;
+                test task 1
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-2&quot;
+              &gt;
+                test task 2
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-1&quot;
+              &gt;
+                test task 1
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-2&quot;
+              &gt;
+                test task 2
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-1&quot;
+              &gt;
+                test task 1
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-2&quot;
+              &gt;
+                test task 2
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-1&quot;
+              &gt;
+                test task 1
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;bp3-card bp3-elevation-0&quot;
+            &gt;
+              &lt;div
+                data-testid=&quot;task-test-task-2&quot;
+              &gt;
+                test task 2
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
               class=&quot;bp3-collapse&quot;
               style=&quot;height: 0px;&quot;
             &gt;
@@ -627,7 +795,7 @@
                   &gt;
                     &lt;button
                       class=&quot;bp3-button&quot;
-                      id=&quot;stage-0-new-task-input-confirm&quot;
+                      data-testid=&quot;stage-0-new-task-input-confirm&quot;
                       type=&quot;button&quot;
                     &gt;
                       &lt;span
@@ -824,287 +992,9 @@
   &lt;/div&gt;
 &lt;/body&gt;
     at getElementError (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
-    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
-    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
-    at renderAppAndAddTasks (/projects/challenge/src/App.test.js:29:29)
-    at Object.&lt;anonymous&gt;.test (/projects/challenge/src/App.test.js:111:3)
-    at Object.asyncFn (/projects/challenge/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
-    at resolve (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
-    at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
-    at &lt;anonymous&gt;</failure>
-    </testcase>
-    <testcase classname=" Moving Tasks" name=" Moving Tasks" time="0.116">
-      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
-
-&lt;body&gt;
-  &lt;div&gt;
-    &lt;div
-      class=&quot;App&quot;
-    &gt;
-      &lt;h1&gt;
-        Kanban board
-      &lt;/h1&gt;
-      &lt;div
-        style=&quot;display: flex;&quot;
-      &gt;
-        &lt;div
-          class=&quot;bp3-card bp3-elevation-0&quot;
-        &gt;
-          &lt;div
-            data-testid=&quot;stage-0&quot;
-          &gt;
-            Backlog
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              /&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-card bp3-elevation-0&quot;
-            &gt;
-              &lt;div
-                data-testid=&quot;task-task-1&quot;
-              &gt;
-                Task 1
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-card bp3-elevation-0&quot;
-            &gt;
-              &lt;div
-                data-testid=&quot;task-task-2&quot;
-              &gt;
-                Task 2
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-              style=&quot;height: 0px;&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              &gt;
-                &lt;div
-                  class=&quot;bp3-input-group&quot;
-                &gt;
-                  &lt;input
-                    class=&quot;bp3-input&quot;
-                    data-testid=&quot;stage-0-new-task-input&quot;
-                    style=&quot;padding-right: 0px;&quot;
-                    type=&quot;text&quot;
-                  /&gt;
-                  &lt;span
-                    class=&quot;bp3-input-action&quot;
-                  &gt;
-                    &lt;button
-                      class=&quot;bp3-button&quot;
-                      id=&quot;stage-0-new-task-input-confirm&quot;
-                      type=&quot;button&quot;
-                    &gt;
-                      &lt;span
-                        class=&quot;bp3-button-text&quot;
-                      &gt;
-                        Confirm
-                      &lt;/span&gt;
-                    &lt;/button&gt;
-                  &lt;/span&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-              style=&quot;height: auto; overflow-y: visible;&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              &gt;
-                &lt;button
-                  class=&quot;bp3-button&quot;
-                  data-testid=&quot;stage-0-add-button&quot;
-                  type=&quot;button&quot;
-                &gt;
-                  &lt;span
-                    class=&quot;bp3-button-text&quot;
-                  &gt;
-                    Add Task
-                  &lt;/span&gt;
-                &lt;/button&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div
-          class=&quot;bp3-card bp3-elevation-0&quot;
-        &gt;
-          &lt;div
-            data-testid=&quot;stage-1&quot;
-          &gt;
-            To Do
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              /&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-card bp3-elevation-0&quot;
-            &gt;
-              &lt;div
-                data-testid=&quot;task-task-3&quot;
-              &gt;
-                Task 3
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              /&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-              style=&quot;height: auto; overflow-y: visible;&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              &gt;
-                &lt;button
-                  class=&quot;bp3-button&quot;
-                  data-testid=&quot;stage-1-add-button&quot;
-                  type=&quot;button&quot;
-                &gt;
-                  &lt;span
-                    class=&quot;bp3-button-text&quot;
-                  &gt;
-                    Add Task
-                  &lt;/span&gt;
-                &lt;/button&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div
-          class=&quot;bp3-card bp3-elevation-0&quot;
-        &gt;
-          &lt;div
-            data-testid=&quot;stage-2&quot;
-          &gt;
-            Ongoing
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              /&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-card bp3-elevation-0&quot;
-            &gt;
-              &lt;div
-                data-testid=&quot;task-task-4&quot;
-              &gt;
-                Task 4
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              /&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-              style=&quot;height: auto; overflow-y: visible;&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              &gt;
-                &lt;button
-                  class=&quot;bp3-button&quot;
-                  data-testid=&quot;stage-2-add-button&quot;
-                  type=&quot;button&quot;
-                &gt;
-                  &lt;span
-                    class=&quot;bp3-button-text&quot;
-                  &gt;
-                    Add Task
-                  &lt;/span&gt;
-                &lt;/button&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div
-          class=&quot;bp3-card bp3-elevation-0&quot;
-        &gt;
-          &lt;div
-            data-testid=&quot;stage-3&quot;
-          &gt;
-            Done
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              /&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              /&gt;
-            &lt;/div&gt;
-            &lt;div
-              class=&quot;bp3-collapse&quot;
-              style=&quot;height: auto; overflow-y: visible;&quot;
-            &gt;
-              &lt;div
-                aria-hidden=&quot;false&quot;
-                class=&quot;bp3-collapse-body&quot;
-              &gt;
-                &lt;button
-                  class=&quot;bp3-button&quot;
-                  data-testid=&quot;stage-3-add-button&quot;
-                  type=&quot;button&quot;
-                &gt;
-                  &lt;span
-                    class=&quot;bp3-button-text&quot;
-                  &gt;
-                    Add Task
-                  &lt;/span&gt;
-                &lt;/button&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
-    at getElementError (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
-    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
-    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
-    at renderAppAndAddTasks (/projects/challenge/src/App.test.js:29:29)
-    at Object.&lt;anonymous&gt;.test (/projects/challenge/src/App.test.js:127:3)
+    at getMultipleElementsFoundError (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:50:10)
+    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:86:13)
+    at Object.&lt;anonymous&gt;.test (/projects/challenge/src/App.test.js:131:15)
     at Object.asyncFn (/projects/challenge/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
     at resolve (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
     at new Promise (&lt;anonymous&gt;)
