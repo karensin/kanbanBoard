@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     let result = [];
     for (let i = 0; i < NUM_STAGES; i++) {
-      result.push(<Stage stageId={i} name={STAGE_NAMES[i]} />)
+      result.push(<Stage stageId={i} name={STAGE_NAMES[i]} main={this} />)
 
     }
     return (

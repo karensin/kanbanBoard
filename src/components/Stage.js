@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 import Task from "./Task";
 import { Card, Button, InputGroup, Collapse } from "@blueprintjs/core";
-import { store } from "../App.js";
+import { store, NUM_STAGES } from "../App.js";
 
-const Stage = ({ name, stageId }) => {
+const Stage = ({ name, stageId, main }) => {
   const [show, setShow] = useState(false);
-  const [showButtons, setShowButtons] = useState(false)
+  const [taskSelected, setTaskSelected] = useState(null)
   const stageTestId = `stage-${stageId}`;
   const addButtonTestId = `${stageTestId}-add-button`;
   const newTaskInputTestId = `${stageTestId}-new-task-input`;
@@ -18,20 +18,49 @@ const Stage = ({ name, stageId }) => {
   function onClickAdd() {
     setShow(true)
   }
-  function onClickTask() {
-    setShowButtons(true)
+  function onClickTask(task) {
+    setTaskSelected(task)
+  }
+  function onClickDelete() {
+    deleteTask(taskSelected)
+    main.forceUpdate()
+    //revisit
+    setTaskSelected(null)
+  }
+  function deleteTask(task) {
+    let ourStore = store[stageId]
+    store[stageId] = ourStore.filter((item) => {
+      return item !== task
+    })
+  }
+  function onClickRight() {
+    if (stageId < NUM_STAGES) {
+      deleteTask(taskSelected)
+      store[stageId + 1].push(taskSelected)
+      main.forceUpdate()
+      setTaskSelected(null)
+    }
+  }
+  function onClickLeft() {
+    if (stageId > 0) {
+      deleteTask(taskSelected)
+      store[stageId - 1].push(taskSelected)
+      main.forceUpdate()
+      setTaskSelected(null)
+    }
+
   }
   console.log(stageId, store)
   const result = store[stageId].map(item => {
-    return <Card onClick={onClickTask}>  <Task name={item}> </Task></Card>
+    return <Card onClick={() => onClickTask(item)}>  <Task name={item}> </Task></Card>
   })
   return (
     <Card>
       <div data-testid={stageTestId}>
-        <Collapse isOpen={showButtons}>
-          <Button data-testid={moveLeftButtonTestId}>{'<'} Back</Button>
-          <Button data-testid={moveRightButtonTestId} >{'>'} Forward</Button>
-          <Button data-testid={deleteButtonTestId}>Delete</Button>
+        <Collapse isOpen={taskSelected !== null}>
+          <Button data-testid={moveLeftButtonTestId} onClick={onClickLeft}>{'<'} Back</Button>
+          <Button data-testid={moveRightButtonTestId} onClick={onClickRight} >{'>'} Forward</Button>
+          <Button data-testid={deleteButtonTestId} onClick={onClickDelete}>Delete</Button>
         </Collapse>
 
         {name}
