@@ -1,82 +1,10 @@
-<testsuites name="jest tests" tests="6" failures="5" time="2.486">
-  <testsuite name="undefined" errors="0" failures="5" skipped="0" timestamp="2020-03-03T22:08:23" time="2.486" tests="6">
-    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.077">
+<testsuites name="jest tests" tests="6" failures="4" time="1.983">
+  <testsuite name="undefined" errors="0" failures="4" skipped="0" timestamp="2020-03-03T22:10:45" time="1.983" tests="6">
+    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.066">
     </testcase>
-    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.042">
-      <failure>Error: Unable to find an element by: [data-testid=&quot;task-task-1&quot;]
-
-&lt;div
-  data-testid=&quot;stage-0&quot;
-&gt;
-  Backlog
-  &lt;div
-    class=&quot;bp3-collapse&quot;
-  &gt;
-    &lt;div
-      aria-hidden=&quot;false&quot;
-      class=&quot;bp3-collapse-body&quot;
-    /&gt;
-  &lt;/div&gt;
-  &lt;div
-    class=&quot;bp3-card bp3-elevation-0&quot;
-  &gt;
-    &lt;div
-      data-testid=&quot;task-Task-1&quot;
-    &gt;
-      Task 1
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div
-    class=&quot;bp3-card bp3-elevation-0&quot;
-  &gt;
-    &lt;div
-      data-testid=&quot;task-Task-2&quot;
-    &gt;
-      Task 2
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div
-    class=&quot;bp3-collapse&quot;
-  &gt;
-    &lt;div
-      aria-hidden=&quot;false&quot;
-      class=&quot;bp3-collapse-body&quot;
-    /&gt;
-  &lt;/div&gt;
-  &lt;div
-    class=&quot;bp3-collapse&quot;
-    style=&quot;height: auto; overflow-y: visible;&quot;
-  &gt;
-    &lt;div
-      aria-hidden=&quot;false&quot;
-      class=&quot;bp3-collapse-body&quot;
-    &gt;
-      &lt;button
-        class=&quot;bp3-button&quot;
-        data-testid=&quot;stage-0-add-button&quot;
-        type=&quot;button&quot;
-      &gt;
-        &lt;span
-          class=&quot;bp3-button-text&quot;
-        &gt;
-          Add Task
-        &lt;/span&gt;
-      &lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-    at getElementError (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
-    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
-    at args (/projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
-    at Object.&lt;anonymous&gt;.test (/projects/challenge/src/App.test.js:73:41)
-    at Object.asyncFn (/projects/challenge/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
-    at resolve (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
-    at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
-    at &lt;anonymous&gt;</failure>
+    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.026">
     </testcase>
-    <testcase classname=" Adding Tasks" name=" Adding Tasks" time="0.192">
+    <testcase classname=" Adding Tasks" name=" Adding Tasks" time="0.146">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
 
 &lt;body&gt;
@@ -109,7 +37,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-1&quot;
+                data-testid=&quot;task-task-1&quot;
               &gt;
                 Task 1
               &lt;/div&gt;
@@ -118,7 +46,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-2&quot;
+                data-testid=&quot;task-task-2&quot;
               &gt;
                 Task 2
               &lt;/div&gt;
@@ -200,7 +128,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-3&quot;
+                data-testid=&quot;task-task-3&quot;
               &gt;
                 Task 3
               &lt;/div&gt;
@@ -255,7 +183,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-4&quot;
+                data-testid=&quot;task-task-4&quot;
               &gt;
                 Task 4
               &lt;/div&gt;
@@ -353,7 +281,7 @@
     at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
     at &lt;anonymous&gt;</failure>
     </testcase>
-    <testcase classname=" Selecting and Deselecting Tasks" name=" Selecting and Deselecting Tasks" time="0.125">
+    <testcase classname=" Selecting and Deselecting Tasks" name=" Selecting and Deselecting Tasks" time="0.107">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
 
 &lt;body&gt;
@@ -386,7 +314,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-1&quot;
+                data-testid=&quot;task-task-1&quot;
               &gt;
                 Task 1
               &lt;/div&gt;
@@ -395,7 +323,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-2&quot;
+                data-testid=&quot;task-task-2&quot;
               &gt;
                 Task 2
               &lt;/div&gt;
@@ -477,7 +405,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-3&quot;
+                data-testid=&quot;task-task-3&quot;
               &gt;
                 Task 3
               &lt;/div&gt;
@@ -532,7 +460,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-4&quot;
+                data-testid=&quot;task-task-4&quot;
               &gt;
                 Task 4
               &lt;/div&gt;
@@ -630,7 +558,7 @@
     at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
     at &lt;anonymous&gt;</failure>
     </testcase>
-    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.117">
+    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.102">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
 
 &lt;body&gt;
@@ -663,7 +591,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-1&quot;
+                data-testid=&quot;task-task-1&quot;
               &gt;
                 Task 1
               &lt;/div&gt;
@@ -672,7 +600,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-2&quot;
+                data-testid=&quot;task-task-2&quot;
               &gt;
                 Task 2
               &lt;/div&gt;
@@ -754,7 +682,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-3&quot;
+                data-testid=&quot;task-task-3&quot;
               &gt;
                 Task 3
               &lt;/div&gt;
@@ -809,7 +737,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-4&quot;
+                data-testid=&quot;task-task-4&quot;
               &gt;
                 Task 4
               &lt;/div&gt;
@@ -907,7 +835,7 @@
     at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
     at &lt;anonymous&gt;</failure>
     </testcase>
-    <testcase classname=" Moving Tasks" name=" Moving Tasks" time="0.113">
+    <testcase classname=" Moving Tasks" name=" Moving Tasks" time="0.116">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-new-task-input-confirm&quot;]
 
 &lt;body&gt;
@@ -940,7 +868,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-1&quot;
+                data-testid=&quot;task-task-1&quot;
               &gt;
                 Task 1
               &lt;/div&gt;
@@ -949,7 +877,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-2&quot;
+                data-testid=&quot;task-task-2&quot;
               &gt;
                 Task 2
               &lt;/div&gt;
@@ -1031,7 +959,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-3&quot;
+                data-testid=&quot;task-task-3&quot;
               &gt;
                 Task 3
               &lt;/div&gt;
@@ -1086,7 +1014,7 @@
               class=&quot;bp3-card bp3-elevation-0&quot;
             &gt;
               &lt;div
-                data-testid=&quot;task-Task-4&quot;
+                data-testid=&quot;task-task-4&quot;
               &gt;
                 Task 4
               &lt;/div&gt;
