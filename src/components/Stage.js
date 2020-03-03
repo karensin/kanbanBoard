@@ -70,14 +70,13 @@ const Stage = ({ name, stageId, main }) => {
   const confirmationButton = <Button id={newTaskInputConfirmTestId} onClick={clickConfirm}>Confirm</Button>
   return (
     <Card>
-      <div data-testid={'task-' + stageTestId}>
+      <div data-testid={stageTestId}>
+        {name}
         <Collapse isOpen={taskSelected !== null}>
           <Button data-testid={moveLeftButtonTestId} onClick={onClickLeft}>{'<'} Back</Button>
           <Button data-testid={moveRightButtonTestId} onClick={onClickRight} >{'>'} Forward</Button>
           <Button data-testid={deleteButtonTestId} onClick={onClickDelete}>Delete</Button>
         </Collapse>
-
-        {name}
         {result}
         <Collapse isOpen={show}>
           <InputGroup data-testid={newTaskInputTestId} onChange={onInputChange} rightElement={confirmationButton} />

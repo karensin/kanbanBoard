@@ -7,6 +7,7 @@ const Task = ({ name }) => {
 
   return (
     <div data-testid={taskTestId}>{name}</div>
+
   );
 };
 
