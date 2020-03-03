@@ -56,7 +56,7 @@ const Stage = ({ name, stageId, main }) => {
   })
   return (
     <Card>
-      <div data-testid={stageTestId}>
+      <div data-testid={'task-' + stageTestId}>
         <Collapse isOpen={taskSelected !== null}>
           <Button data-testid={moveLeftButtonTestId} onClick={onClickLeft}>{'<'} Back</Button>
           <Button data-testid={moveRightButtonTestId} onClick={onClickRight} >{'>'} Forward</Button>
