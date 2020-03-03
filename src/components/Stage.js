@@ -67,7 +67,7 @@ const Stage = ({ name, stageId, main }) => {
   const result = store[stageId].map(item => {
     return <Card onClick={() => onClickTask(item)}><Task name={item}> </Task></Card>
   })
-  const confirmationButton = <Button id={newTaskInputConfirmTestId} onClick={clickConfirm}>Confirm</Button>
+  const confirmationButton = <Button data-testid={newTaskInputConfirmTestId} onClick={clickConfirm}>Confirm</Button>
   return (
     <Card>
       <div data-testid={stageTestId}>
