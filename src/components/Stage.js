@@ -6,7 +6,9 @@ import { store, NUM_STAGES } from "../App.js";
 
 const Stage = ({ name, stageId, main }) => {
   const [show, setShow] = useState(false);
-  const [taskSelected, setTaskSelected] = useState(null)
+  const [taskSelected, setTaskSelected] = useState(null);
+  const [newTask, setNewTask] = useState(null)
+
   const stageTestId = `stage-${stageId}`;
   const addButtonTestId = `${stageTestId}-add-button`;
   const newTaskInputTestId = `${stageTestId}-new-task-input`;
@@ -48,12 +50,24 @@ const Stage = ({ name, stageId, main }) => {
       main.forceUpdate()
       setTaskSelected(null)
     }
-
   }
-  console.log(stageId, store)
+  function clickConfirm() {
+    store[stageId].push(newTask);
+    main.forceUpdate()
+    setTaskSelected(null)
+    setShow(false);
+  }
+
+  function onInputChange(e) {
+    console.log(e.target.value)
+    setNewTask(e.target.value);
+  }
+
+  // console.log(stageId, store)
   const result = store[stageId].map(item => {
-    return <Card onClick={() => onClickTask(item)}>  <Task name={item}> </Task></Card>
+    return <Card onClick={() => onClickTask(item)}><Task name={item}> </Task></Card>
   })
+  const confirmationButton = <Button id={newTaskInputConfirmTestId} onClick={clickConfirm}>Confirm</Button>
   return (
     <Card>
       <div data-testid={'task-' + stageTestId}>
@@ -66,9 +80,11 @@ const Stage = ({ name, stageId, main }) => {
         {name}
         {result}
         <Collapse isOpen={show}>
-          <InputGroup data-testid={newTaskInputTestId} />
+          <InputGroup data-testid={newTaskInputTestId} onChange={onInputChange} rightElement={confirmationButton} />
         </Collapse>
-        <Button data-testid={addButtonTestId} onClick={onClickAdd} >Add Task</Button>
+        <Collapse isOpen={!show}>
+          <Button data-testid={addButtonTestId} onClick={onClickAdd}>Add Task</Button>
+        </Collapse>
 
       </div>
     </Card>
