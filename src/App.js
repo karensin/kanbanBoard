@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card, Button, InputGroup } from "@blueprintjs/core";
-
+import { createStore } from 'redux'
 import "./App.css";
 import Stage from "./components/Stage";
 

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { connect } from 'react-redux';
 
 import Task from "./Task";
 import { Card, Button, InputGroup, Collapse } from "@blueprintjs/core";
 import { store, NUM_STAGES } from "../App.js";
 
-const Stage = ({ name, stageId, main }) => {
+const Stage = (props) => {
+  const { name, stageId, main } = props;
   const [show, setShow] = useState(false);
   const [taskSelected, setTaskSelected] = useState(null);
   const [newTask, setNewTask] = useState(null)
@@ -68,6 +70,8 @@ const Stage = ({ name, stageId, main }) => {
     return <Card onClick={() => onClickTask(item)}><Task name={item}> </Task></Card>
   })
   const confirmationButton = <Button data-testid={newTaskInputConfirmTestId} onClick={clickConfirm}>Confirm</Button>
+
+  console.log(props)
   return (
     <Card>
       <div data-testid={stageTestId}>
@@ -92,4 +96,10 @@ const Stage = ({ name, stageId, main }) => {
 
 };
 
-export default Stage;
+const mapStateToProps = (state) => {
+  return {
+    tasks: state.Tasks
+  }
+}
+
+export default connect(mapStateToProps)(Stage);
